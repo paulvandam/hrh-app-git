@@ -1,0 +1,150 @@
+<div id="crumb">
+  <div class="crumb-container"><a href="/vestigingen">Vestigingen</a> > <%=vestiging.naam%></div>
+</div>
+<div class="article-container">
+  <article id="vestiging">
+    <section id="trigger" class="elevator">
+      <div class="section-container">
+        <div class="section-text">
+          <h1>Het Rughuis <%=vestiging.naam%><br />heet je graag welkom</h1>
+          <div class="vestiging">
+            <div class="details">
+              <div class="adres">
+                <div class="telnr">
+                  <a class="" href="tel:+31880001600">088 - 000 1600</a><br />
+                  <sup class="bijschrift">algemeen nummer, je wordt doorverbonden</sup>
+                </div>
+                <div>
+                  <a
+                    href="https://www.google.nl/maps/place/<%=vestiging.mapslocatie%>"
+                    rel="noopener"
+                    rel="noreferrer"
+                    >Route plannen </a
+                  ><br />
+                  <sup class="lnk-ext">Google maps</sup>
+                </div>
+              </div>
+              <div class="openingstijden">
+                <div><%=vestiging.adres%>, <%=vestiging.postcode%> <%=vestiging.plaatsnaam%></div>
+                <span class="bold">nu open</span> tot 21.00 uur
+                <br />
+                <span class="bold">ma - do</span> <%=vestiging.openingstijden[0] %> uur
+                <br />
+                <span class="bold">vr</span> <%=vestiging.openingstijden[1] %> uur
+                <br />
+                <span class="bold">za - zo</span> gesloten
+              </div>
+            </div>
+          </div>
+          <p>
+            Als rugklachten je leven beheersen, biedt Het Rughuis <%=vestiging.naam%> een
+            behandeling op maat met persoonlijke aandacht.
+          </p>
+
+          <p>
+            <a
+              class="btn-cta"
+              href="/afspraak?vestiging=<%=vestiging.slug%>"
+              label="afspraak-<%=vestiging.slug%>"
+              >Afspraak maken</a
+            >
+          </p>
+          <p>
+            <a class="lnk-dotted" href="/over/behandeling" label="behandeling"
+              >Meer over de behandeling</a
+            >
+            <br />
+            <a
+              class="lnk-dotted"
+              href="/verwijzen?vestiging=<%=vestiging.slug%>"
+              label="verwijzers-info-<%=vestiging.slug%>"
+              >Verwijzen naar deze vestiging</a
+            >
+          </p>
+        </div>
+      </div>
+    </section>
+    <!-- trigger -->
+    <section id="binnenkijken">
+      <div class="section-container">
+        <div class="section-text">
+          <h2>Neem alvast een kijkje op de vestiging</h2>
+          <p>
+            We doen er alles aan om onze behandelcentra zo huiselijk en warm mogelijk te maken voor
+            onze cliënten. We zijn tenslotte geen ziekenhuis en vinden het belangrijk dat je op je
+            gemak bent tijdens je bezoek.
+          </p>
+        </div>
+        <div class="section-binnenkijken">
+          <%- include('./partials/vestigingen-afbeeldingen') %>
+        </div>
+      </div>
+    </section>
+    <!-- store-locator -->
+    <section id="ervaringen">
+      <div class="section-container">
+        <div class="section-text">
+          <h2>Professioneel, gastvrij en met persoonlijke aandacht</h2>
+          <p>
+            Cliënten ervaren Het Rughuis <%=vestiging.naam%> als een ontzettend gastvrije omgeving
+            met veel persoonlijke aandacht. Het professionele en bekwame behandelteam begrijpt hun
+            klachten en biedt een luisterend oor. Voor velen bood Het Rughuis een behandeling met
+            een resultaat dat ze niet durfden te verwachten.
+          </p>
+        </div>
+        <div class="section-ervaringen">
+          <h3>Dit zeggen cliënten van Het Rughuis <%=vestiging.naam%></h3>
+          <%- include('./partials/ervaringen-recent') %>
+        </div>
+        <p><a href="/reviews">Lees meer verhalen</a></p>
+      </div>
+    </section>
+    <section id="reviews">
+      <div class="section-container">
+        <h2>Zo beoordelen cliënten Het Rughuis <%=vestiging.naam%></h2>
+        <div class="section-reviews">
+          <div class="review review-cqi <%=vestiging.slug%>">
+            <h3 class="review-title">Cliënttevredenheidscijfer</h3>
+            <div class="review-score">8,7<span class="text-sub">/10</span></div>
+            <span class="review-description">Consumer Quality Index<br />gemiddelde 01-2020</span>
+          </div>
+          <div class="review review-zkn">
+            <h3 class="review-title">Zorgkaart Nederland</h3>
+            <div class="review-score">8,8<span class="text-sub">/10</span></div>
+            <span class="review-description"
+              >88% beveelt Het Rughuis <%=vestiging.naam%> aan<br />56 waarderingen</span
+            >
+          </div>
+          <div class="review review-fb">
+            <h3 class="review-title">Facebook</h3>
+            <div class="review-score">4,4<span class="text-sub">/5</span></div>
+            <span class="review-description">
+              <svg width="100" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 97.27 17.77">
+                <g id="b044401b-7e7a-4b04-8523-24a1c5e66b4e" data-name="Laag 2">
+                  <path
+                    d="M9.34,0l2.31,6.64,7,.15L13.08,11l2,6.73-5.77-4-5.77,4L5.6,11,0,6.79l7-.15ZM26.68,6.64l-7,.15L25.25,11l-2,6.73,5.78-4,5.77,4-2-6.73,5.61-4.25-7-.15L29,0Zm19.65,0-7,.15L44.9,11l-2,6.73,5.77-4,5.78,4-2-6.73L58,6.79l-7-.15L48.63,0ZM66,6.64l-7,.15L64.54,11l-2,6.73,5.77-4,5.77,4L72,11l5.6-4.25-7-.15L68.28,0Zm19.65,0-7,.15L84.19,11l-2,6.73,5.78-4,5.77,4-2-6.73,5.61-4.25-7-.15L87.93,0Z"
+                    style="fill:#1d1d1b"
+                  />
+                </g>
+              </svg>
+              <br />94 waarderingen</span
+            >
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- reviews -->
+    <section id="afspraak">
+      <div class="section-container">
+        <h2>Onze specialisten helpen je graag</h2>
+        <p>
+          Vraag nu een kosteloos en vrijblijvend kennismakingsgesprek aan bij Het Rughuis
+          <%=vestiging.naam%>.
+        </p>
+        <a class="btn-cta" href="/afspraak" label="afspraak">Afspraak maken</a>
+      </div>
+    </section>
+    <!-- afspraak -->
+  </article>
+</div>
+<!-- article-container -->

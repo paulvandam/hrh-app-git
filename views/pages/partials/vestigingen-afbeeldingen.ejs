@@ -1,0 +1,10 @@
+<ul>
+  <% afbeeldingen.forEach(function (afbeelding, key) {%>
+  <li>
+    <img
+      src="/images/vestigingen/<%=afbeelding %>"
+      alt="Foto van Het Rughuis <%=vestiging.naam%> <%=key%>"
+    />
+  </li>
+  <%})%>
+</ul>

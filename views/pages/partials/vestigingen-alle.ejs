@@ -1,0 +1,37 @@
+<% vestigingen.forEach(function (vestiging) { %>
+<div class="vestiging">
+  <div class="info">
+    <h3 class="naam">
+      <a href="/vestigingen/<%=vestiging.slug%>">Het Rughuis <%=vestiging.naam%></a>
+    </h3>
+    <div class="details">
+      <div class="adres">
+        <p><%=vestiging.adres%><br /><%=vestiging.postcode%> <%=vestiging.plaatsnaam%></p>
+        <div class="openingstijden">
+          <span class="bold">nu open</span> tot 21.00 uur <br /><br />
+          <span class="bold">ma - do</span> <%=vestiging.openingstijden[0] %> uur
+          <br />
+          <span class="bold">vr</span> <%=vestiging.openingstijden[1] %> uur
+          <br />
+          <span class="bold">za - zo</span> gesloten
+        </div>
+      </div>
+      <div class="cta">
+        <a class="lnk-dotted" href="/contact">Contact opnemen</a>
+        <a class="lnk-dotted" href="/afspraak">Afspraak maken</a>
+        <a class="lnk-dotted" href="/verwijzers/verwijsformulier?location=<%=vestiging.slug%>"
+          >Verwijzen</a
+        >
+      </div>
+    </div>
+  </div>
+  <div class="beeld">
+    <img
+      class="foto"
+      src="/images/vestigingen/<%=vestiging.afbeeldingen[0] %>"
+      alt="exterieurfoto van de Het Rughuis <%=vestiging.plaatsnaam%>"
+    />
+    <a href="/vestigingen/<%=vestiging.slug%>">Binnenkijken</a>
+  </div>
+</div>
+<% }) %>

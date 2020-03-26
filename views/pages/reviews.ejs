@@ -1,0 +1,59 @@
+<div class="article-container">
+  <article>
+    <section id="trigger" class="elevator">
+      <div class="section-container">
+        <div class="section-text">
+          <h1>Honderden cliënten verbeterden<br />hun kwaliteit van leven</h1>
+          <p>
+            Wie aanklopt bij Het Rughuis heeft vaak een heel verhaal te vertellen. Huisartsen,
+            specialisten en andere professionals gaven aan niet veel meer voor je te kunnen
+            betekenen.
+          </p>
+          <p>
+            Als je dan eindelijk een luisterend oor vindt bij Het Rughuis voelt dat enorm welkom, en
+            zo ervaren cliënten ons dan ook. De behandeling is intensief maar zorgt ook voor mooie
+            momenten, en is voor velen een ervaring die hun leven blijvend positief heeft veranderd.
+          </p>
+        </div>
+      </div>
+    </section>
+    <!-- trigger -->
+    <section id="stories">
+      <div class="section-container">
+        <h2>Het verhaal van...</h2>
+        <%- include('./partials/stories') %>
+      </div>
+    </section>
+    <!-- store-locator -->
+    <section id="ervaringen">
+      <div class="section-container">
+        <div class="section-text">
+          <h2>Recente ervaringen</h2>
+          <div class="filterbox">
+            <div class="filter-decription">
+              Filter op:
+            </div>
+            <div class="filter-vestiging">Vestiging</div>
+            <div class="filter-klacht">Klacht</div>
+          </div>
+          <div class="filter-current">
+            <span class="filter">rijnmond</span>
+            <span class="filter">lage-rugpijn</span>
+            <span><a href="#" class="lnk-dotted">Alles wissen</a></span>
+          </div>
+          <!--Filter box--><%- include('./partials/ervaringen-recent') %>
+        </div>
+      </div>
+    </section>
+    <!-- alle vestigingen -->
+    <section id="afspraak">
+      <div class="section-container">
+        <h2>Neem de leiding over je leven terug</h2>
+        <p>Vraag nu een kosteloos en vrijblijvend kennismakingsgesprek aan.</p>
+        <a class="btn-cta" label="afspraak" href="/afspraak">afspraak maken</a>
+      </div>
+    </section>
+    <!-- afspraak -->
+  </article>
+</div>
+<!-- article-container -->

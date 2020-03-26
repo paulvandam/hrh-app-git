@@ -1,0 +1,100 @@
+{
+  "vestigingen": [
+    {
+      "naam": "Midden-Nederland",
+      "adres": "Boschdijk 24",
+      "postcode": "5612 AM",
+      "plaatsnaam": "Eindhoven",
+      "openingstijden": ["8.00 - 21.00", "8.00 - 19.00"],
+      "slug": "eindhoven",
+      "mapslocatie": "Het+Rughuis+Eindhoven",
+      "afbeeldingen": [
+        "eindhoven_001_tn.jpg",
+        "eindhoven_002_tn.jpg",
+        "eindhoven_003_tn.jpg",
+        "eindhoven_004_tn.jpg",
+        "eindhoven_005_tn.jpg"
+      ]
+    },
+    {
+      "naam": "Gelderland",
+      "adres": "Kerkenbos 1008",
+      "postcode": "6546 BA",
+      "plaatsnaam": "Nijmegen",
+      "openingstijden": ["8.00 - 21.00", "8.00 - 19.00"],
+      "slug": "gelderland",
+      "mapslocatie": "Het+Rughuis+Gelderland",
+      "afbeeldingen": [
+        "gelderland_001_tn.jpg",
+        "gelderland_002_tn.jpg",
+        "gelderland_003_tn.jpg",
+        "gelderland_004_tn.jpg",
+        "gelderland_005_tn.jpg"
+      ]
+    },
+    {
+      "naam": "Rijnmond",
+      "adres": "Cypresbaan 29",
+      "postcode": "2908 LT",
+      "plaatsnaam": "Capelle a/d IJssel",
+      "openingstijden": ["8.00 - 21.00", "8.00 - 19.00"],
+      "slug": "rijnmond",
+      "mapslocatie": "Het+Rughuis+Rijnmond",
+      "afbeeldingen": [
+        "rijnmond_001_tn.jpg",
+        "rijnmond_002_tn.jpg",
+        "rijnmond_003_tn.jpg",
+        "rijnmond_004_tn.jpg",
+        "rijnmond_005_tn.jpg"
+      ]
+    },
+    {
+      "naam": "Sittard-Geleen",
+      "adres": "Vijverweg 28",
+      "postcode": "6133 AR",
+      "plaatsnaam": "Sittard",
+      "openingstijden": ["8.00 - 21.00", "8.00 - 19.00"],
+      "slug": "sittard-geleen",
+      "mapslocatie": "Het+Rughuis+Sittard-Geleen",
+      "afbeeldingen": [
+        "sittard-geleen_001_tn.jpg",
+        "sittard-geleen_002_tn.jpg",
+        "sittard-geleen_003_tn.jpg",
+        "sittard-geleen_004_tn.jpg",
+        "sittard-geleen_005_tn.jpg"
+      ]
+    },
+    {
+      "naam": "Midden- en Noord-Limburg",
+      "adres": "Westhoven 5",
+      "postcode": "6042 NV",
+      "plaatsnaam": "Roermond",
+      "openingstijden": ["8.00 - 21.00", "8.00 - 19.00"],
+      "slug": "roermond",
+      "mapslocatie": "Het+Rughuis+Roermond",
+      "afbeeldingen": [
+        "roermond_001_tn.jpg",
+        "roermond_002_tn.jpg",
+        "roermond_003_tn.jpg",
+        "roermond_004_tn.jpg",
+        "roermond_005_tn.jpg"
+      ]
+    },
+    {
+      "naam": "Zuid-Limburg",
+      "adres": "Euregiopark 14",
+      "postcode": "6467 JE",
+      "plaatsnaam": "Kerkrade",
+      "openingstijden": ["8.00 - 21.00", "8.00 - 19.00"],
+      "slug": "zuid-limburg",
+      "mapslocatie": "Het+Rughuis+Zuid-Limburg",
+      "afbeeldingen": [
+        "zuid-limburg_001_tn.jpg",
+        "zuid-limburg_002_tn.jpg",
+        "zuid-limburg_003_tn.jpg",
+        "zuid-limburg_004_tn.jpg",
+        "zuid-limburg_005_tn.jpg"
+      ]
+    }
+  ]
+}

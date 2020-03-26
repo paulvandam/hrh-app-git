@@ -1,0 +1,864 @@
+@charset "UTF-8";
+@import url("https://use.typekit.net/hft1kjr.css");
+html {
+  box-sizing: border-box; }
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit; }
+
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ol,
+ul {
+  margin: 0;
+  padding: 0;
+  font-weight: normal; }
+
+ol,
+ul {
+  list-style: none; }
+
+img {
+  max-width: 100%;
+  height: auto; }
+
+/* Responsive typography https://codepen.io/MadeByMike/pen/YPJJYv */
+:root {
+  font-size: 16px; }
+
+@media (min-width: 400px) and (max-width: 800px) {
+  :root {
+    font-size: calc( 16px + (22 - 16) * ((100vw - 400px) / (800 - 400))); } }
+
+@media (min-width: 800px) {
+  :root {
+    font-size: 22px; } }
+
+body {
+  font-family: source-sans-pro, sans-serif;
+  font-weight: 400;
+  line-height: 1.4;
+  color: #434d57; }
+
+p {
+  line-height: 1.8;
+  margin-bottom: 1em;
+  max-width: 36em; }
+
+h1,
+h2 {
+  font-family: quatro-slab, serif;
+  font-weight: 400;
+  line-height: 1.4;
+  margin-bottom: 1em;
+  margin-top: 3em; }
+  h1:first-of-type,
+  h2:first-of-type {
+    margin-top: 0em; }
+
+h3,
+h4 {
+  font-weight: 700;
+  margin-bottom: 1em; }
+
+h1 {
+  font-size: 2rem; }
+  @media (max-width: 800px) {
+    h1 {
+      font-size: 1.8rem; } }
+
+h2 {
+  font-size: 1.7rem; }
+  @media (max-width: 800px) {
+    h2 {
+      font-size: 1.4rem; } }
+
+h3 {
+  font-size: 1.4rem; }
+  @media (max-width: 800px) {
+    h3 {
+      font-size: 1.2rem; } }
+
+.bold {
+  font-weight: 700; }
+
+sup {
+  font-style: italic;
+  max-width: 36em; }
+
+a {
+  display: inline-block;
+  color: #333; }
+  a.btn-cta {
+    padding: 0.5em 1em;
+    display: inline-block;
+    border: 1px solid;
+    border-radius: 2.5em;
+    text-decoration: none;
+    min-width: max-content;
+    text-transform: lowercase; }
+  a.lnk-dotted {
+    text-decoration: none;
+    border-bottom: 0.11em dotted;
+    padding: 0px; }
+  a.lnk-ext::after {
+    content: '🔗';
+    position: relative;
+    bottom: 0.5em;
+    left: 0.2em;
+    font-size: 0.5em; }
+  a.stel-een-vraag {
+    padding: 10px 22px;
+    border-radius: 22px;
+    box-shadow: 2px 3px 3px rgba(0, 0, 0, 0.15);
+    text-decoration: none;
+    align-self: center; }
+    a.stel-een-vraag .btn-txt {
+      margin-left: 0.5em; }
+    @media (max-width: 800px) {
+      a.stel-een-vraag .btn-txt {
+        display: none; } }
+
+header {
+  margin: 0 auto; }
+  header .header-container {
+    display: flex;
+    flex-flow: row wrap;
+    align-items: baseline;
+    padding: 5% 10%; }
+    @media (max-width: 800px) {
+      header .header-container {
+        padding: 5%; } }
+    header .header-container nav:last-of-type {
+      margin-left: auto; }
+    header .header-container .site-info {
+      align-self: center;
+      margin-right: 1em; }
+    header .header-container .site-search {
+      border: 1px solid lightgray;
+      padding: 0 10px;
+      display: flex;
+      border-radius: 22px;
+      height: 34px; }
+      @media (min-width: 800px) {
+        header .header-container .site-search {
+          width: 120px; } }
+      header .header-container .site-search svg {
+        align-self: center;
+        fill: black;
+        width: 12px; }
+
+nav#menu-snel {
+  padding: 5px 10%;
+  background-color: lightgray; }
+  @media (max-width: 800px) {
+    nav#menu-snel {
+      padding: 5px 5%; } }
+  nav#menu-snel ul li {
+    margin-right: 10px; }
+    nav#menu-snel ul li:last-of-type {
+      margin-left: auto;
+      margin-right: 0px; }
+
+nav#menu-hoofd ul li {
+  margin-right: 0.5em; }
+  nav#menu-hoofd ul li:last-of-type {
+    margin-right: 0; }
+  nav#menu-hoofd ul li ul {
+    display: none;
+    flex-flow: column nowrap; }
+
+@media (max-width: 800px) {
+  nav#menu-hoofd {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100vw;
+    height: 10vh;
+    padding: 3% 5%;
+    border-top: 1px solid lightgray;
+    z-index: 9998;
+    background-color: white;
+    display: flex; }
+    nav#menu-hoofd ul {
+      align-self: center; } }
+
+nav#menu-contact ul li a {
+  padding: 0 0.5em; }
+
+nav#menu-contact li:last-of-type {
+  border-left: 1px solid lightgray; }
+
+nav#menu-footer {
+  display: flex;
+  flex-flow: row; }
+  @media (max-width: 400px) {
+    nav#menu-footer {
+      justify-content: space-between; }
+      nav#menu-footer ul {
+        margin-right: 0em; } }
+  nav#menu-footer ul {
+    flex-flow: column nowrap;
+    margin-right: 1em; }
+
+nav a {
+  text-decoration: none;
+  padding: 5px 0px;
+  font-size: 0.9rem; }
+
+nav ul {
+  display: flex;
+  flex-direction: row; }
+  nav ul li {
+    list-style: none; }
+    nav ul li a {
+      padding: 0;
+      line-height: 1.6; }
+
+.section-container {
+  padding: 50px 0;
+  margin: 0 10% 0 20%; }
+  @media (max-width: 800px) {
+    .section-container {
+      padding: 50px 5%;
+      margin: 0; } }
+
+.article-container article section {
+  padding: 10vh 0; }
+  .article-container article section .locator {
+    display: flex;
+    flex-wrap: wrap; }
+    .article-container article section .locator-instructions {
+      font-size: 0.8rem; }
+    .article-container article section .locator-currentlocation {
+      margin-left: auto; }
+    .article-container article section .locator-form {
+      flex-basis: 100%;
+      margin: 0.5em 0 1em 0; }
+      .article-container article section .locator-form form .search {
+        padding: 10px;
+        border: 1px solid lightgray;
+        border-radius: 22px;
+        width: 50%; }
+      .article-container article section .locator-form form #submit {
+        padding: 10px 15px;
+        border-radius: 22px;
+        box-shadow: none;
+        border: 1px solid lightgray; }
+    .article-container article section .locator-results {
+      margin-top: 2em; }
+    .article-container article section .locator-closest {
+      margin-bottom: 2em;
+      border-radius: 22px;
+      font-size: 0.8rem;
+      display: flex;
+      flex-flow: row wrap; }
+      @media (max-width: 800px) {
+        .article-container article section .locator-closest {
+          flex-flow: column nowrap;
+          font-size: 1rem; } }
+      .article-container article section .locator-closest-info, .article-container article section .locator-closest-cta, .article-container article section .locator-closest-details {
+        flex-basis: 0;
+        flex-grow: 1; }
+      .article-container article section .locator-closest-container {
+        display: flex;
+        flex-flow: row wrap;
+        flex-basis: 0;
+        flex-grow: 1; }
+      .article-container article section .locator-closest-title {
+        flex-basis: 100%;
+        margin-bottom: 1em; }
+      .article-container article section .locator-closest-name {
+        font-size: 1rem;
+        flex-basis: 100%;
+        flex-grow: 1;
+        margin-bottom: 1em; }
+      .article-container article section .locator-closest-info, .article-container article section .locator-closest-cta {
+        display: flex;
+        flex-flow: column nowrap;
+        margin-right: 2em; }
+      .article-container article section .locator-closest-img {
+        width: 350px;
+        height: 150px;
+        background-color: lightgray;
+        margin-bottom: 1em; }
+
+.story {
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: flex-end;
+  height: 60vh;
+  padding-bottom: 2em;
+  z-index: 90;
+  text-align: center;
+  background-color: lightgray;
+  flex-basis: 0;
+  flex-grow: 1;
+  transform: scale(0.8);
+  opacity: 0.5;
+  border-radius: 25px; }
+  .story:first-of-type {
+    margin-right: -5vw; }
+  .story:last-of-type {
+    margin-left: -5vw; }
+  @media (max-width: 800px) {
+    .story {
+      min-width: 50vw; }
+      .story:first-of-type {
+        margin-right: -40vw; }
+      .story:last-of-type {
+        margin-left: -40vw; } }
+  .story-quote, .story-link {
+    opacity: 0;
+    pointer-events: none; }
+  .story-active {
+    transform: scale(1);
+    opacity: 1;
+    z-index: 100; }
+    .story-active .story-quote,
+    .story-active .story-link {
+      visibility: visible;
+      pointer-events: visible;
+      opacity: 1; }
+  .story-container {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 10vw; }
+    @media (max-width: 800px) {
+      .story-container {
+        padding: 0px; } }
+  .story-link {
+    text-decoration: none;
+    display: inline-block;
+    padding: 10px 20px;
+    border: 1px solid black;
+    border-radius: 25px;
+    max-width: max-content;
+    align-self: center; }
+
+.ervaring {
+  display: flex;
+  flex-flow: row wrap;
+  flex-basis: 0;
+  flex-grow: 1;
+  padding-right: 3em; }
+  @media (max-width: 800px) {
+    .ervaring {
+      margin-bottom: 5vh; }
+      .ervaring:last-of-type {
+        margin-bottom: 0; } }
+  .ervaring:last-of-type {
+    padding-right: 0; }
+  .ervaring-name:after {
+    content: ':'; }
+  .ervaring-quote {
+    font-style: italic; }
+  .ervaring-link {
+    align-self: flex-end; }
+  .ervaringen {
+    display: flex;
+    padding: 2em 0 0 0; }
+    @media (max-width: 800px) {
+      .ervaringen {
+        flex-flow: column wrap; } }
+    .ervaringen-container {
+      padding: 2em 0 0 0; }
+
+.ervaringen {
+  margin-bottom: 2em; }
+
+#crumb .crumb-container {
+  padding: 10px 10%;
+  margin: 0 auto;
+  color: slategray; }
+  @media (max-width: 800px) {
+    #crumb .crumb-container {
+      padding: 50px 5%; } }
+  #crumb .crumb-container a {
+    display: inline; }
+
+#pijlers .pijler {
+  flex-basis: 0;
+  flex-grow: 1;
+  margin: 0 2em 2em 0; }
+  #pijlers .pijler:last-of-type {
+    margin-right: 0; }
+  #pijlers .pijlers {
+    display: flex;
+    flex-flow: row wrap; }
+  #pijlers .pijler-img {
+    width: 5vh;
+    height: 5vh;
+    background-color: white;
+    background-size: contain;
+    border: 1px solid lightgray;
+    border-radius: 50%; }
+  #pijlers .pijler-link {
+    padding: 10px 0; }
+
+#reviews .section-reviews {
+  display: flex; }
+  @media (max-width: 800px) {
+    #reviews .section-reviews {
+      flex-flow: row wrap; } }
+  #reviews .section-reviews .review {
+    flex-basis: 0;
+    flex-grow: 1;
+    margin: 0 2em 3em 0;
+    text-align: center; }
+    #reviews .section-reviews .review:last-of-type {
+      margin-right: 0; }
+    #reviews .section-reviews .review-score {
+      font-size: 2em; }
+      #reviews .section-reviews .review-score .text-sub {
+        font-size: 0.4em; }
+    #reviews .section-reviews .review-description {
+      font-size: 0.8em; }
+
+#review .review-header {
+  display: flex;
+  max-width: 36em; }
+  #review .review-header figure {
+    flex-basis: 150px;
+    min-width: 150px;
+    height: 150px;
+    background-color: lightgray;
+    border-radius: 100px;
+    margin: 0;
+    margin-right: 3%; }
+
+#story .section-video {
+  display: flex;
+  flex-flow: row wrap; }
+  #story .section-video .video-container {
+    position: relative;
+    padding-bottom: 43.5%;
+    padding-top: 30px;
+    height: 0;
+    overflow: hidden;
+    flex-basis: 0;
+    flex-grow: 4; }
+    #story .section-video .video-container iframe,
+    #story .section-video .video-container object,
+    #story .section-video .video-container embed {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%; }
+  #story .section-video .interaction-container {
+    min-width: max-content;
+    flex-basis: 0;
+    flex-grow: 1;
+    padding-left: 1em;
+    align-self: self-end; }
+  #story .section-video .video-quote {
+    flex-basis: 100%;
+    flex-grow: 1; }
+  @media (max-width: 800px) {
+    #story .section-video {
+      flex-flow: column nowrap; }
+      #story .section-video .video-container {
+        margin-bottom: 1em; }
+      #story .section-video .interaction-container {
+        display: flex;
+        flex-flow: row wrap;
+        align-items: baseline; }
+        #story .section-video .interaction-container h3,
+        #story .section-video .interaction-container a {
+          padding-left: 1em; } }
+
+#reacties .reactie {
+  padding: 1em 0 2em 0;
+  border-bottom: 1px solid lightgray; }
+  #reacties .reactie:last-of-type {
+    border-bottom: 0; }
+  #reacties .reactie-container {
+    padding: 2em 0; }
+  #reacties .reactie-naam {
+    font-weight: 700; }
+    #reacties .reactie-naam.reactie-mod::after {
+      content: 'Het Rughuis';
+      font-weight: 400;
+      color: slategray;
+      font-size: 0.6em;
+      position: relative;
+      left: 0.5em; }
+  #reacties .reactie-antwoord {
+    padding-left: 2em;
+    border-left: 1px solid lightgray; }
+  #reacties .reactie-meta a {
+    border-color: lightgray; }
+
+#vestigingen .vestiging {
+  display: flex;
+  margin-bottom: 5em; }
+  #vestigingen .vestiging .info {
+    flex-basis: 0;
+    flex-grow: 3;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-between;
+    padding-right: 1em; }
+    #vestigingen .vestiging .info .naam {
+      margin-bottom: 1em; }
+    #vestigingen .vestiging .info .details {
+      display: flex;
+      flex-flow: row nowrap;
+      line-height: 1.4; }
+      #vestigingen .vestiging .info .details .adres {
+        padding-right: 2em; }
+      #vestigingen .vestiging .info .details .cta {
+        display: flex;
+        flex-flow: column nowrap; }
+        #vestigingen .vestiging .info .details .cta a {
+          max-width: max-content; }
+      #vestigingen .vestiging .info .details .openingstijden {
+        font-size: 0.8rem; }
+  #vestigingen .vestiging .beeld {
+    flex-basis: 0;
+    flex-grow: 2;
+    display: flex;
+    flex-flow: column;
+    justify-content: space-between; }
+  @media (max-width: 800px) {
+    #vestigingen .vestiging {
+      flex-flow: column; }
+      #vestigingen .vestiging .details {
+        justify-content: space-between;
+        margin-bottom: 1em; }
+      #vestigingen .vestiging .beeld {
+        flex-basis: 100%; } }
+
+#vestiging #trigger {
+  padding: 10vh 0 25vh 0; }
+
+#vestiging #binnenkijken .section-binnenkijken ul li {
+  display: none; }
+  #vestiging #binnenkijken .section-binnenkijken ul li:first-of-type {
+    display: initial; }
+
+#vestiging .vestiging .details {
+  display: flex;
+  margin-bottom: 4em; }
+  #vestiging .vestiging .details .adres {
+    padding-right: 2em;
+    line-height: 1; }
+  #vestiging .vestiging .details .telnr {
+    margin-bottom: 1em; }
+    #vestiging .vestiging .details .telnr a {
+      font-size: 2em;
+      font-weight: 300;
+      text-decoration: none;
+      line-height: 1; }
+  #vestiging .vestiging .details .openingstijden {
+    line-height: 1.4; }
+  @media (max-width: 800px) {
+    #vestiging .vestiging .details {
+      flex-flow: column nowrap; } }
+
+#afspraak {
+  min-height: max-content; }
+
+#afspraakformulier {
+  display: flex;
+  flex-flow: row nowrap; }
+  #afspraakformulier #stap1 {
+    display: flex;
+    flex-flow: column nowrap;
+    padding-right: 2em;
+    border-right: 1px solid lightgray; }
+    #afspraakformulier #stap1 .vestiging-keuze {
+      display: flex;
+      min-width: max-content;
+      padding: 0 1em 1em 0; }
+    #afspraakformulier #stap1 label {
+      padding-left: 1em; }
+    @media (max-width: 800px) {
+      #afspraakformulier #stap1 {
+        flex-flow: column wrap; } }
+  #afspraakformulier #stap2 {
+    display: flex;
+    flex-flow: column nowrap;
+    padding: 0 2em;
+    border-right: 1px solid lightgray;
+    /* h2 {
+      font-size: 1em;
+      padding-top: 0.5em;
+    } */ }
+    #afspraakformulier #stap2 div {
+      display: flex;
+      flex-flow: row wrap;
+      justify-content: space-between;
+      padding-bottom: 1em; }
+      #afspraakformulier #stap2 div label {
+        flex-basis: 0;
+        flex-grow: 1;
+        align-self: center;
+        padding-right: 0.5em;
+        min-width: max-content; }
+      #afspraakformulier #stap2 div input {
+        flex-basis: 0;
+        flex-grow: 2;
+        border: none;
+        border-bottom: 1px solid lightgray;
+        padding: 1em 0 0.5em 0; }
+  #afspraakformulier #stap3 {
+    /* h2 {
+      font-size: 1em;
+      padding-top: 0.5em;
+    } */
+    padding-left: 2em; }
+  @media (max-width: 1200px) {
+    #afspraakformulier {
+      flex-flow: column wrap; }
+      #afspraakformulier #stap1,
+      #afspraakformulier #stap2,
+      #afspraakformulier #stap3 {
+        padding-bottom: 2em; }
+      #afspraakformulier #stap1,
+      #afspraakformulier #stap2 {
+        border-right: none;
+        padding-right: 0;
+        padding-left: 0; }
+      #afspraakformulier #stap3 {
+        padding-left: 0; } }
+
+#contact {
+  background-color: whitesmoke; }
+  #contact .contact-container {
+    display: flex;
+    flex-flow: row nowrap; }
+    @media (max-width: 800px) {
+      #contact .contact-container {
+        flex-flow: column nowrap; } }
+    #contact .contact-container ul {
+      display: flex; }
+      #contact .contact-container ul li {
+        flex-basis: 0;
+        flex-grow: 1;
+        padding-bottom: 1em; }
+      @media (max-width: 800px) {
+        #contact .contact-container ul {
+          flex-flow: column nowrap;
+          padding-right: 0;
+          border-right: 0;
+          margin-right: 0; } }
+  #contact .contact-bellen {
+    margin-right: 2em;
+    min-width: max-content; }
+  #contact .contact-werkdagen, #contact .contact-altijd {
+    min-width: max-content;
+    padding-right: 2em;
+    border-right: 1px solid lightgray;
+    margin-right: 2em; }
+    @media (max-width: 800px) {
+      #contact .contact-werkdagen, #contact .contact-altijd {
+        flex-flow: column nowrap;
+        padding-right: 0;
+        border-right: 0;
+        margin-right: 0;
+        margin-bottom: 1em; } }
+
+#mailen form #bericht {
+  height: 30vh;
+  width: 100%;
+  max-width: 36em; }
+
+#mailen form select,
+#mailen form textarea {
+  border: 1px solid lightgray;
+  border-radius: 4px;
+  resize: vertical;
+  font-size: 1rem;
+  color: slategray; }
+
+#mailen form select {
+  padding: 0.5em;
+  border: none;
+  border-bottom: 1px solid lightgray;
+  color: #434d57; }
+
+#mailen form input[type='text'] {
+  border: none;
+  border-bottom: 1px solid lightgray;
+  padding: 5px 1px;
+  font-size: 1rem;
+  color: #434d57; }
+
+#mailen form input[type='submit'] {
+  padding: 1em 2em;
+  border-radius: 2.5em;
+  border: 1px solid slategray;
+  background-color: white;
+  font-size: 1rem;
+  color: #434d57; }
+
+#verwijzen {
+  background-color: whitesmoke; }
+  #verwijzen .verwijsbox {
+    display: flex;
+    flex-flow: row nowrap; }
+    @media (max-width: 800px) {
+      #verwijzen .verwijsbox {
+        flex-flow: column nowrap; } }
+    #verwijzen .verwijsbox li {
+      flex-basis: 0;
+      flex-grow: 1;
+      padding-right: 2em;
+      padding-bottom: 1em; }
+      #verwijzen .verwijsbox li:last-of-type {
+        padding-right: 0; }
+
+#zelftest form {
+  margin-bottom: 4em; }
+
+#zelftest .vraag {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: flex-between;
+  max-width: 800px;
+  margin-bottom: 2em; }
+
+#zelftest label {
+  flex-basis: 100%;
+  flex-grow: 1; }
+
+#zelftest input {
+  flex-grow: 6; }
+
+#zelftest .score {
+  flex-basis: 50px;
+  flex-grow: 1;
+  text-align: right;
+  color: lightgray; }
+
+#zelftest .resultaat {
+  margin-bottom: 2em; }
+
+#verwijzers-behandeling .behandeling-container {
+  display: flex;
+  flex-flow: row wrap;
+  margin: 5% 0; }
+  #verwijzers-behandeling .behandeling-container .item {
+    flex-basis: 0;
+    flex-grow: 1;
+    margin-right: 5%; }
+    #verwijzers-behandeling .behandeling-container .item:last-of-type {
+      margin-right: 0; }
+    #verwijzers-behandeling .behandeling-container .item-img {
+      margin-bottom: 5%; }
+  @media (max-width: 800px) {
+    #verwijzers-behandeling .behandeling-container {
+      flex-flow: column nowrap;
+      align-items: center; }
+      #verwijzers-behandeling .behandeling-container .item {
+        margin-right: 0; } }
+
+#verwijzers-verwijsgids .section-factoren {
+  display: flex;
+  flex-flow: row wrap; }
+  #verwijzers-verwijsgids .section-factoren .factor {
+    flex-basis: 20%;
+    flex-grow: 1;
+    margin-right: 5%;
+    margin-bottom: 5vh;
+    max-width: 25vw; }
+    #verwijzers-verwijsgids .section-factoren .factor-txt {
+      padding: 1em 0; }
+  @media (max-width: 800px) {
+    #verwijzers-verwijsgids .section-factoren {
+      flex-flow: column nowrap; }
+      #verwijzers-verwijsgids .section-factoren .factor {
+        max-width: inherit;
+        margin-right: 0; } }
+
+#verwijzers-verwijsgids .pijngedrag-container {
+  margin: 5% 0; }
+  #verwijzers-verwijsgids .pijngedrag-container .gedrag {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    margin-bottom: 5%; }
+    #verwijzers-verwijsgids .pijngedrag-container .gedrag-header {
+      display: flex;
+      flex-flow: row wrap;
+      justify-content: space-between;
+      flex-basis: 100%;
+      align-items: baseline; }
+      #verwijzers-verwijsgids .pijngedrag-container .gedrag-header h3 {
+        flex-grow: 1;
+        margin-right: 5%;
+        flex-basis: 0; }
+      #verwijzers-verwijsgids .pijngedrag-container .gedrag-header span {
+        flex-grow: 4;
+        flex-basis: 0; }
+    #verwijzers-verwijsgids .pijngedrag-container .gedrag-houding {
+      flex-basis: 0;
+      flex-grow: 1;
+      margin-right: 5%; }
+    #verwijzers-verwijsgids .pijngedrag-container .gedrag-signalement {
+      flex-basis: 0;
+      flex-grow: 2;
+      margin-right: 5%; }
+      #verwijzers-verwijsgids .pijngedrag-container .gedrag-signalement li {
+        list-style: disc;
+        padding-bottom: 0.5em; }
+    #verwijzers-verwijsgids .pijngedrag-container .gedrag-gedachten {
+      flex-basis: 0;
+      flex-grow: 1; }
+
+#verwijsgids .section-container {
+  display: flex;
+  flex-flow: row nowrap; }
+  @media (max-width: 800px) {
+    #verwijsgids .section-container {
+      flex-flow: column nowrap; }
+      #verwijsgids .section-container .section-txt {
+        flex-grow: 1;
+        padding-bottom: 1em; }
+      #verwijsgids .section-container .section-cta {
+        align-self: auto; } }
+
+#verwijsgids .section-txt {
+  flex-basis: 0;
+  flex-grow: 2;
+  margin-right: 5%; }
+
+#verwijsgids .section-cta {
+  flex-basis: 0;
+  flex-grow: 1;
+  align-self: flex-end; }
+
+footer {
+  padding: 2em 10% 2em 20%;
+  background-color: lightgray;
+  font-size: 0.8rem; }
+  @media (max-width: 800px) {
+    footer {
+      margin-bottom: 10vh;
+      padding: 2em 5%; } }
+
+#chat-module {
+  display: flex;
+  height: 10vh;
+  position: fixed;
+  bottom: 0;
+  right: 5%;
+  z-index: 9999; }
+  #chat-module a {
+    background: white; }
+  #chat-module svg {
+    align-self: center;
+    fill: black;
+    width: 12px; }
+
+/*# sourceMappingURL=style.css.map */

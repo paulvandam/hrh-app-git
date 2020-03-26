@@ -1,0 +1,15 @@
+<!-- maakt 2e story active-->
+<script>
+  document.body.querySelectorAll('.story').forEach(function(node, i) {
+    node.classList.add(i % 2 ? 'story-active' : 'story-inactive');
+  });
+</script>
+<script>
+  $(document).ready(function() {
+    $('input[type="range"]').on('change mousemove', function() {
+      $(this)
+        .next()
+        .html($(this).val());
+    });
+  });
+</script>

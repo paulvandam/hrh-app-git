@@ -1,0 +1,69 @@
+<div id="crumb">
+  <div class="crumb-container"><a href="/reviews">Reviews</a> > Review <%=review.naam%></div>
+</div>
+<div class="article-container">
+  <article id="review">
+    <section id="trigger" class="elevator">
+      <div class="section-container">
+        <div class="review-header">
+          <figure>
+            <img
+              src="/images/reviews/profielfoto_<%=review.slug%>.jpg"
+              alt="Profielfoto van <%=review.naam%>"
+            />
+          </figure>
+          <div class="review-meta">
+            <h1>Ervaring van <%=review.naam%> met Het Rughuis <%=review.vestiging%></h1>
+            <h2></h2>
+          </div>
+        </div>
+        <div class="review-tekst">
+          <%-review.reviewtekst%>
+        </div>
+      </div>
+    </section>
+    <!-- trigger -->
+    <section id="reacties">
+      <div class="section-container">
+        <h2>Reacties</h2>
+        <p>
+          Stel hier al je vragen en opmerkingen n.a.v. het verhaal van <%=review.naam%>. Wil je een
+          notificatie als op jouw bericht is gereageerd? Geef dan je ook je email-adres op bij de
+          reactie.
+        </p>
+        <sup>
+          Reageren of een vraag stellen mag anoniem, maar reacties worden vooraf gemodereerd. Houd
+          het taalgebruik netjes en constructief. Heb je feedback voor het behandelteam of een
+          vestiging? Reageer dan <a href="/contact#feedback">hier</a>.
+        </sup>
+        <div class="reactiecontainer">
+          <div class="reactie">
+            <div class="reactie-naam">Gerard:</div>
+            <p class="reactie-description">
+              Wat kost de behandeling?
+            </p>
+            <span class="reactie-meta"></span>
+            <div class="reactie-antwoord">
+              <div class="reactie-naam reactie-mod">Michelle</div>
+              <p class="reactie-description">
+                De behandeling wordt volledig vergoed door het basispakket van elke verzekeraar, let
+                wel op het verplichte eigen risisco. Meer details vindt u op de pagina
+                <a href="/over/vergoeding">vergoedingen</a>.
+              </p>
+              <span class="reactie-meta"><a class="btn-cta" href="#reacties">👍</a> 3</span>
+            </div>
+          </div>
+          <div class="reactie">
+            <div class="reactie-naam">Anoniem</div>
+            <p class="reactie-description">
+              Wat een mooie ervaring, kan ik over meepraten!
+            </p>
+            <span class="reactie-meta"><a class="btn-cta" href="#reacties">👍</a> 5</span>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- reacties -->
+  </article>
+</div>
+<!-- article-container -->

@@ -1,0 +1,12 @@
+<div class="ervaringen">
+  <% recenteReviews.forEach(function (review) { %>
+  <div class="ervaring">
+    <h4 class="ervaring-name"><%=review.naam%></h4>
+    <p class="ervaring-quote">
+      "<%=review.samenvatting%>"
+    </p>
+    <a class="lnk-dotted ervaring-link" href="/reviews/review/<%=review.slug%>">lees meer</a>
+  </div>
+  <% }) %>
+</div>
+<!-- Recente ervaringen -->

@@ -1,0 +1,84 @@
+<div id="crumb">
+  <div class="crumb-container"><a href="/reviews">Reviews</a> > Ervaring <%=story.naam%></div>
+</div>
+<div class="article-container">
+  <article id="story">
+    <section id="trigger" class="elevator">
+      <div class="section-container">
+        <div class="section-text">
+          <h1>Het verhaal van <%=story.naam%>: <i>"<%=story.quote%>"</i></h1>
+        </div>
+        <div class="section-video">
+          <div class="video-container">
+            <iframe
+              src="https://www.youtube-nocookie.com/embed/<%=story.ytlink%>?modestbranding=1&showinfo=0&rel=0&cc_load_policy=1&iv_load_policy=3&color=white"
+              width="560"
+              height="315"
+              frameborder="0"
+            ></iframe>
+          </div>
+          <div class="interaction-container">
+            <p>
+              18 👍 <a class="lnk-dotted" href="#">Like</a><br />
+              2 &nbsp;&nbsp;💬 <a class="lnk-dotted" href="#reacties">Praat mee</a>
+            </p>
+            <h4>Deel deze video</h4>
+            <a class="share-facebook" href="">Facebook</a><br />
+            <a class="share-linkedin" href="">LinkedIn</a><br />
+            <a class="share-email" href="">Email</a>
+          </div>
+          <span class="video-quote"> </span>
+        </div>
+      </div>
+    </section>
+    <!-- trigger -->
+    <section id="transcriptie">
+      <div class="section-container">
+        <%- story.reviewtekst %>
+      </div>
+    </section>
+    <!-- transcriptie -->
+    <section id="reacties">
+      <div class="section-container">
+        <h2>Reacties</h2>
+        <p>
+          Stel hier al je vragen en opmerkingen n.a.v. het verhaal van <%=story.naam%>. Wil je een
+          notificatie als op jouw bericht is gereageerd? Geef dan je ook je gegevens op bij de
+          reactie.
+        </p>
+        <sup>
+          Reageren of een vraag stellen mag anoniem, maar reacties worden vooraf gemodereerd. Houd
+          het taalgebruik netjes en constructief. Heb je feedback voor het behandelteam of een
+          vestiging? Reageer dan <a href="/contact#feedback">hier</a>.
+        </sup>
+        <div class="reactiecontainer">
+          <div class="reactie">
+            <div class="reactie-naam">Gerard:</div>
+            <p class="reactie-description">
+              Wat kost de behandeling?
+            </p>
+            <span class="reactie-meta"></span>
+            <div class="reactie-antwoord">
+              <div class="reactie-naam reactie-mod">Michelle</div>
+              <p class="reactie-description">
+                De behandeling wordt volledig vergoed door het basispakket van elke verzekeraar, let
+                wel op het verplichte eigen risisco. Meer details vindt u op de pagina
+                <a href="/over/vergoeding">vergoedingen</a>.
+              </p>
+              <span class="reactie-meta"><a class="btn-cta" href="#reacties">👍</a> 3</span>
+            </div>
+          </div>
+          <div class="reactie">
+            <div class="reactie-naam">Anoniem</div>
+            <p class="reactie-description">
+              Wat een mooie ervaring, kan ik over meepraten!
+            </p>
+            <span class="reactie-meta"><a class="btn-cta" href="#reacties">👍</a> 5</span>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- reacties -->
+  </article>
+</div>
+<!-- article-container -->

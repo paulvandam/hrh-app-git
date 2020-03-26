@@ -1,0 +1,16 @@
+<div class="story-container">
+  <% recenteStories.forEach(function (story) { %>
+  <div class="story story-<%=story.slug%>">
+    <h3 class="story-title">
+      <%=story.naam%>
+    </h3>
+    <p class="story-quote">
+      "<%=story.quote%>"
+    </p>
+    <a class="story-link" href="/reviews/video/<%=story.slug%>">
+      bekijk verhaal
+    </a>
+  </div>
+  <% }) %>
+</div>
+<!-- stories -->

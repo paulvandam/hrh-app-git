@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta
+      name="viewport"
+      content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
+    />
+    <title><%= pageTitle %>&nbsp;|&nbsp;<%= siteName %></title>
+
+    <meta property="og:url" content="/your-page.html" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="<%= pageTitle %>" />
+    <meta property="og:description" content="Your description" />
+    <meta property="og:image" content="/images/image.jpg" />
+
+    <link rel="stylesheet" href="/stylesheets/style.css" />
+  </head>
+  <body>
+    <header>
+      <nav id="menu-snel">
+        <ul>
+          <li>
+            <a href="/afspraak">Afspraak maken</a>
+          </li>
+          <li>
+            <a href="/verwijzers">Verwijzen</a>
+          </li>
+          <li>
+            <a class="append-arrow" href="/chat">Snel vragen</a>
+          </li>
+          <li>
+            <a href="/mijn-rughuis">Mijn Rughuis</a>
+          </li>
+        </ul>
+      </nav>
+      <div class="header-container">
+        <div class="site-info">
+          <a href="/"><span class="site-title"><%= siteName %></span></a>
+        </div>
+        <%- include(`./partials/menu-hoofd`) %>
+        <div class="site-search">
+          <svg xmlns="http://www.w3.org/2000/svg" width="12" viewBox="0 0 8.17 8.55">
+            <g id="site-search-icon">
+              <path
+                d="M7.93,7.19l-1-1.05,0,0a3.81,3.81,0,1,0-3,1.53,3.88,3.88,0,0,0,1.86-.5.67.67,0,0,0,.07.11L6.81,8.32A.8.8,0,1,0,7.93,7.19ZM3.82,6.05A2.23,2.23,0,1,1,6.05,3.82,2.23,2.23,0,0,1,3.82,6.05Z"
+              />
+            </g>
+          </svg>
+        </div>
+      </div>
+    </header>
+    <%- include(`../pages/${template}`) %>
+    <footer>
+      <%- include(`./partials/menu-footer`) %>
+
+      <div class="site-info"></div>
+      <!-- site-info -->
+    </footer>
+    <!-- footer -->
+
+    <%- include(`./partials/chat`) %> <%- include(`./partials/scripts`) %>
+    <!-- Scripts -->
+  </body>
+</html>

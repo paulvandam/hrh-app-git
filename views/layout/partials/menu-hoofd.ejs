@@ -1,0 +1,21 @@
+<nav id="menu-hoofd">
+  <ul>
+    <li><a href="/over">Over</a></li>
+    <li><a href="/reviews">Reviews</a></li>
+    <li>
+      <a href="/vestigingen">Vestigingen</a>
+      <ul>
+        <% vestigingNamen.forEach(function (vestiging) { %>
+        <li><a href="/vestigingen/<%=vestiging.slug%>"><%=vestiging.naam%></a></li>
+        <%}) %>
+      </ul>
+    </li>
+    <li><a href="/rugklachten">Rugklachten</a></li>
+  </ul>
+</nav>
+<nav id="menu-contact">
+  <ul>
+    <li><a href="tel:+31880001600">+31 (0)88 000 1600</a></li>
+    <li><a href="/contact">Contact</a></li>
+  </ul>
+</nav>

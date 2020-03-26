@@ -1,0 +1,99 @@
+<div class="article-container">
+  <article>
+    <section id="trigger" class="elevator">
+      <div class="section-container">
+        <div class="section-text">
+          <h1>Laat je informeren<br />bij Het Rughuis</h1>
+          <p>
+            Als rugpijn een grote impact heeft op je (sociale) leven informeren we je graag
+            persoonlijk over onze behandeling. Ook als je nog geen verwijsbrief van je verwijzer
+            hebt ben je van harte welkom op een vestiging in de buurt.
+          </p>
+          <form id="afspraakformulier">
+            <div id="stap1" class="kies-vestiging">
+              <h3>1. Kies een vestiging</h3>
+              <% vestigingen.forEach(function (vestiging) { %>
+              <div class="vestiging-keuze">
+                <input type="radio" name="vestiging" value="<%=vestiging.naam%>" />
+                <label for="vestiging-<%=vestiging.slug%>">
+                  <strong>Het Rughuis <%=vestiging.naam%></strong><br />
+                  <%=vestiging.adres%>, <%=vestiging.postcode%> <%=vestiging.plaatsnaam%>
+                </label>
+              </div>
+              <% }) %>
+            </div>
+
+            <div id="stap2" class="naw">
+              <h3>2. Vul je gegevens in</h3>
+              <div>
+                <label for="naam">Volledige naam</label>
+                <input type="text" id="naam" name="naam" />
+              </div>
+              <div>
+                <label for="emailadres">Emailadres</label>
+                <input type="text" id="emailadres" name="emailadres" />
+              </div>
+              <div>
+                <label for="telnr">Telefoonnummer</label>
+                <input type="text" id="telnr" name="telnr" />
+              </div>
+              <sup>
+                Om een informatiegesprek in te plannen proberen wij je eerst te bellen. Geef je
+                alleen een emailadres op, dan sturen we per email een verzoek om te bellen op een
+                moment dat het jou gelegen komt.
+              </sup>
+            </div>
+            <div id="stap3" class="verzenden">
+              <h3>3. Verzenden</h3>
+
+              <p>
+                Je gegevens zijn veilig en worden alleen verwerkt om onze diensten te verlenen
+                overeenkomstig het <a class="lnk-dotted" href="/privacy">Privacybeleid</a>
+              </p>
+              <br />
+              <a class="btn-cta" type="submit" value="verzenden" href="#vragen">verzenden</a>
+            </div>
+          </form>
+          <div class="afspraak-bedankt"></div>
+        </div>
+      </div>
+    </section>
+    <!-- trigger -->
+    <section id="vragen">
+      <div class="section-container">
+        <h2>Je aanvraag werd succesvol verzonden</h2>
+        <p><b>[tel. ingevuld:]</b> We bellen je z.s.m. om een afspraak te maken.</p>
+        <p>
+          <b>[alleen e-mail]:</b> Binnen enkele minuten ontvang je een email met alle
+          startinformatie. Mocht je niets ontvangen hebben, check dan ook je spam map.
+        </p>
+        <h2>Wat kan ik verwachten van het gesprek?</h2>
+        <p>
+          Op de vestiging krijg je uitgebreide informatie over de behandelmethode en
+          intakeprocedure. Ook krijg je alle gelegenheid om vragen te stellen, en geven we een
+          kleine rondleiding voor een complete indruk. Aan het eind van het gesprek krijg je alle
+          informatie mee om een geïnformeerde beslissing te maken of Het Rughuis bij je past.
+        </p>
+        <h2>Moet ik een verwijsbrief meenemen?</h2>
+        <p>
+          Voor het informatiegesprek heb je <b>geen verwijsbrief</b> nodig. Heb je wel een
+          verwijsbrief en je wilt starten? Dan kunnen we meteen de intake plannen.
+        </p>
+        <h2>Kost deze afspraak geld?</h2>
+        <p>
+          Dit eerste informatiegesprek is volledig kosteloos en vrijblijvend. Volgt een intake en
+          behandeltraject, dan worden deze
+          <a class="lnk-dotted" href="over/vergoeding">volledig vergoed</a>.
+        </p>
+        <h2>Kun je makkelijk parkeren bij de vestiging?</h2>
+        <p>
+          Alle vestigingen bieden gratis parkeergelegenheid en een goede aansluiting met het OV.
+          Maak je een afspraak, dan ontvang je in de bevestigingsmail een duidelijke
+          routebeschrijving.
+        </p>
+      </div>
+    </section>
+    <!-- Vragen -->
+  </article>
+</div>
+<!-- article-container -->
