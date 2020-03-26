@@ -10,9 +10,9 @@ const VestigingService = require('./services/VestigingService');
 const ReviewsService = require('./services/ReviewService');
 const StoriesService = require('./services/StoryService');
 
-const vestigingService = new VestigingService('./data/vestigingen.json');
-const reviewsService = new ReviewsService('./data/reviews.json');
-const storiesService = new StoriesService('./data/stories.json');
+const vestigingService = new VestigingService('/data/vestigingen.json');
+const reviewsService = new ReviewsService('/data/reviews.json');
+const storiesService = new StoriesService('/data/stories.json');
 
 const routes = require('./routes');
 
