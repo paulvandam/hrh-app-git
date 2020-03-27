@@ -5,7 +5,6 @@ const path = require('path');
 const cookieParser = require('cookie-parser');
 const cookieSession = require('cookie-session');
 const logger = require('morgan');
-const sassMiddleware = require('node-sass-middleware');
 
 const VestigingService = require('./services/VestigingService');
 const ReviewsService = require('./services/ReviewService');
@@ -38,15 +37,6 @@ app.use(
     keys: ['kjhsajashkjsa', 'kashusahkahukh'],
   })
 );
-app.use(
-  sassMiddleware({
-    src: path.join(__dirname, 'public'),
-    dest: path.join(__dirname, 'public'),
-    indentedSyntax: false, // true = .sass and false = .scss
-    sourceMap: true,
-  })
-);
-app.use(express.static(path.join(__dirname, 'public')));
 
 app.use(async (req, res, next) => {
   try {
