@@ -1,20 +1,25 @@
 {
-  "name": "hetrughuis",
-  "version": "0.0.0",
+  "name": "hrh-app-git",
+  "version": "1.0.0",
   "private": true,
   "scripts": {
     "start": "node ./bin/www",
+    "lambda": "./node_modules/.bin/netlify-lambda serve src",
+    "build": "SET NODE_ENV=production ./node_modules/.bin/netlify-lambda build src",
     "dev": "nodemon -e js,ejs,scss --ignore src/app.js"
   },
   "dependencies": {
-    "cookie-parser": "~1.4.4",
+    "cookie-parser": "^1.4.5",
     "cookie-session": "^1.4.0",
     "debug": "~2.6.9",
     "ejs": "~2.6.1",
     "express": "~4.16.1",
     "http-errors": "~1.6.3",
     "morgan": "~1.9.1",
+    "netlify-lambda": "^1.6.3",
+    "node-sass": "^4.13.1",
     "node-sass-middleware": "0.11.0",
-    "nodemon": "^2.0.2"
+    "nodemon": "^2.0.2",
+    "serverless-http": "^2.3.2"
   }
 }

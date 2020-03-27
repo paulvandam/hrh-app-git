@@ -1,5 +1,6 @@
 const createError = require('http-errors');
 const express = require('express');
+const serverless = require('serverless-http');
 const path = require('path');
 const cookieParser = require('cookie-parser');
 const cookieSession = require('cookie-session');
@@ -10,9 +11,9 @@ const VestigingService = require('./services/VestigingService');
 const ReviewsService = require('./services/ReviewService');
 const StoriesService = require('./services/StoryService');
 
-const vestigingService = new VestigingService('/data/vestigingen.json');
-const reviewsService = new ReviewsService('/data/reviews.json');
-const storiesService = new StoriesService('/data/stories.json');
+const vestigingService = new VestigingService('./src/data/vestigingen.json');
+const reviewsService = new ReviewsService('./src/data/reviews.json');
+const storiesService = new StoriesService('./src/data/stories.json');
 
 const routes = require('./routes');
 
@@ -58,7 +59,7 @@ app.use(async (req, res, next) => {
 });
 
 app.use(
-  '/',
+  `/.netlify/functions/app`,
   routes({
     vestigingService,
     reviewsService,
@@ -83,3 +84,4 @@ app.use(function(err, req, res, next) {
 });
 
 module.exports = app;
+module.exports.handler = serverless(app);
